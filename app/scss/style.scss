@@ -48,6 +48,7 @@
         flex-direction: column;
         padding: 10px 20px 20px 30px;
         cursor: pointer;
+        max-width: 253px;
     }
 
     &-title {
@@ -148,15 +149,12 @@
     transition: 2s;
 
     &__item {
+        position: relative;
         background-color: #fff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         width: 500px;
         height: 400px;
         border-radius: 2%;
-        &-inner{
-            
-            height: 100px;
-        }
         &-title{
             margin: 0;
             background-color: #FFC340;
@@ -165,8 +163,20 @@
             border-bottom: 2px solid #000;
         }
     }
+    &__close-btn{
+        background-image: url("/img/close__btn-img.svg");
+        background-size: cover;
+        min-height: 70px;
+        min-width: 70px;
+        margin-top: -5px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
 }
 .active-popup{
     left: 0%;
 }
+
 @import "media";
